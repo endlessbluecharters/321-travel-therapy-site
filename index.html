@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>321 Travel Therapy | Luxury &amp; Accessible Travel Planning with Lynn Richards-Suley</title>
+<meta name="description" content="321 Travel Therapy — luxury, high-touch travel planning for anxious, quirky, and high-maintenance travelers. Certified Travel Advisor. IATA Accredited. Signature Travel Network. Caribbean, tropical, group, and special-needs travel." />
+<meta name="theme-color" content="#0e4d5c" />
+
+<!-- Open Graph / social sharing -->
+<meta property="og:title" content="321 Travel Therapy | Luxury &amp; Accessible Travel Planning" />
+<meta property="og:description" content="You don't have to have it all together to see the world. You just need the right advisor. Luxury and accessible travel, planned around the real you." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://321traveltherapy.com" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --ocean:      #0e4d5c;   /* deep teal */
+    --ocean-deep: #093843;
+    --ocean-soft: #16697a;
+    --sand:       #f6efe4;   /* warm cream */
+    --sand-deep:  #efe3d0;
+    --gold:       #c9992f;   /* warm brass */
+    --gold-light: #e0b552;
+    --ink:        #1f2a2c;
+    --ink-soft:   #46595c;
+    --white:      #ffffff;
+    --shadow:     0 18px 50px -20px rgba(9, 56, 67, 0.45);
+    --radius:     18px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--sand);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .serif {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+  }
+
+  a { color: inherit; }
+
+  .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- NAV ---------- */
+  header.nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(246, 239, 228, 0.88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(14, 77, 92, 0.10);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+  }
+  .brand { display: inline-flex; align-items: center; font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.15rem; color: var(--ocean); text-decoration: none; letter-spacing: 0.01em; }
+  .nav-avatar { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; object-position: center top; margin-right: 11px; border: 2px solid var(--gold-light); }
+  .brand span { color: var(--gold); }
+  .nav-links { display: flex; gap: 30px; align-items: center; }
+  .nav-links a { text-decoration: none; font-size: 0.93rem; font-weight: 500; color: var(--ink-soft); transition: color .2s; }
+  .nav-links a:hover { color: var(--ocean); }
+  .nav-cta {
+    background: var(--ocean); color: var(--white) !important;
+    padding: 9px 18px; border-radius: 999px; font-weight: 600 !important;
+  }
+  .nav-cta:hover { background: var(--ocean-deep); }
+  @media (max-width: 720px) { .nav-links a:not(.nav-cta) { display: none; } }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    background:
+      linear-gradient(180deg, rgba(9,56,67,0.72) 0%, rgba(14,77,92,0.82) 100%),
+      radial-gradient(1200px 500px at 70% -10%, #1c7b8f 0%, #0e4d5c 55%, #093843 100%);
+    color: var(--sand);
+    padding: 96px 0 108px;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 12% 20%, rgba(224,181,82,0.14), transparent 30%),
+      radial-gradient(circle at 88% 75%, rgba(224,181,82,0.10), transparent 32%);
+    pointer-events: none;
+  }
+  .hero .wrap { position: relative; z-index: 2; }
+  .eyebrow {
+    display: inline-block; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--gold-light);
+    border: 1px solid rgba(224,181,82,0.4); padding: 6px 14px; border-radius: 999px;
+    margin-bottom: 26px;
+  }
+  .hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 600; max-width: 16ch; margin-bottom: 22px; }
+  .hero h1 em { font-style: italic; color: var(--gold-light); }
+  .hero p.lede { font-size: clamp(1.05rem, 2.4vw, 1.3rem); max-width: 54ch; color: rgba(246,239,228,0.9); margin-bottom: 38px; }
+  .hero-btns { display: flex; flex-wrap: wrap; gap: 14px; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 15px 28px; border-radius: 999px; text-decoration: none;
+    font-weight: 600; font-size: 1rem; transition: transform .15s, box-shadow .2s, background .2s;
+    border: 0; cursor: pointer;
+  }
+  .btn-primary { background: var(--gold); color: #2a1f04; box-shadow: 0 10px 30px -10px rgba(201,153,47,0.8); }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-ghost { background: rgba(246,239,228,0.10); color: var(--sand); border: 1px solid rgba(246,239,228,0.35); }
+  .btn-ghost:hover { background: rgba(246,239,228,0.18); transform: translateY(-2px); }
+  .btn-dark { background: var(--ocean); color: var(--white); }
+  .btn-dark:hover { background: var(--ocean-deep); transform: translateY(-2px); }
+
+  .hero-trust {
+    margin-top: 46px; display: flex; flex-wrap: wrap; gap: 10px 26px;
+    font-size: 0.82rem; letter-spacing: 0.04em; color: rgba(246,239,228,0.78);
+  }
+  .hero-trust span { display: inline-flex; align-items: center; gap: 8px; }
+  .hero-trust span::before { content: "◆"; color: var(--gold-light); font-size: 0.7rem; }
+
+  /* ---------- SECTIONS ---------- */
+  section { padding: 84px 0; }
+  .section-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+  h2.section-title { font-size: clamp(1.9rem, 4.4vw, 2.8rem); font-weight: 600; color: var(--ocean); max-width: 20ch; margin-bottom: 22px; }
+
+  /* About */
+  .about { background: var(--white); }
+  .about-grid { display: grid; grid-template-columns: 0.82fr 1.18fr; gap: 56px; align-items: center; }
+  .about-photo { position: relative; }
+  .about-photo img {
+    width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top;
+    border-radius: var(--radius); box-shadow: var(--shadow); display: block;
+  }
+  .photo-cap {
+    position: absolute; left: 18px; bottom: -18px;
+    background: var(--white); border: 1px solid rgba(14,77,92,0.10);
+    border-radius: 12px; padding: 12px 18px; box-shadow: 0 12px 30px -14px rgba(9,56,67,0.4);
+    font-size: 0.82rem; color: var(--ink-soft); line-height: 1.4;
+  }
+  .photo-cap b { display: block; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--ocean); }
+  .about-text p { margin-bottom: 18px; font-size: 1.06rem; color: var(--ink-soft); }
+  .about-text p strong { color: var(--ink); font-weight: 600; }
+  .about-pull-wrap { margin-top: 58px; }
+  .pullquote {
+    max-width: 820px; margin: 0 auto;
+    background: var(--sand); border-left: 4px solid var(--gold);
+    padding: 34px 36px; border-radius: 0 var(--radius) var(--radius) 0; box-shadow: var(--shadow);
+  }
+  .pullquote p { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; font-style: italic; color: var(--ocean); line-height: 1.35; }
+  .pullquote .sig { margin-top: 20px; font-family: 'Inter', sans-serif; font-style: normal; font-size: 0.9rem; font-weight: 600; color: var(--ink-soft); letter-spacing: 0.02em; }
+  @media (max-width: 820px) { .about-grid { grid-template-columns: 1fr; gap: 44px; } .about-photo { max-width: 420px; } .photo-cap { left: 14px; } }
+
+  /* Specialties */
+  .specialties { background: var(--sand); }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 42px; }
+  .card {
+    background: var(--white); border-radius: var(--radius); padding: 32px 28px;
+    box-shadow: 0 10px 30px -18px rgba(9,56,67,0.35); border: 1px solid rgba(14,77,92,0.07);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .card .ico { font-size: 1.7rem; margin-bottom: 16px; }
+  .card h3 { font-size: 1.2rem; font-weight: 600; color: var(--ocean); margin-bottom: 10px; }
+  .card p { font-size: 0.96rem; color: var(--ink-soft); }
+  @media (max-width: 820px) { .cards { grid-template-columns: 1fr; } }
+
+  /* Approach / why me */
+  .approach { background: var(--ocean); color: var(--sand); }
+  .approach h2.section-title { color: var(--white); }
+  .approach .section-label { color: var(--gold-light); }
+  .approach-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 50px; align-items: start; }
+  .approach-lead p { font-size: 1.12rem; color: rgba(246,239,228,0.9); margin-bottom: 18px; }
+  .approach-lead p em { color: var(--gold-light); font-style: italic; }
+  .steps { display: flex; flex-direction: column; gap: 8px; }
+  .step { display: flex; gap: 18px; padding: 20px 4px; border-bottom: 1px solid rgba(246,239,228,0.14); }
+  .step:last-child { border-bottom: 0; }
+  .step .num { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 600; color: var(--gold-light); min-width: 46px; }
+  .step h4 { font-size: 1.05rem; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+  .step p { font-size: 0.95rem; color: rgba(246,239,228,0.8); }
+  @media (max-width: 820px) { .approach-grid { grid-template-columns: 1fr; gap: 34px; } }
+
+  /* Credentials strip */
+  .creds { background: var(--white); text-align: center; padding: 64px 0; }
+  .creds h2 { font-size: 1.5rem; font-weight: 600; color: var(--ocean); margin-bottom: 8px; }
+  .creds p.sub { color: var(--ink-soft); margin-bottom: 34px; }
+  .cred-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+  .badge {
+    background: var(--sand); border: 1px solid rgba(14,77,92,0.12); border-radius: 999px;
+    padding: 12px 22px; font-size: 0.9rem; font-weight: 500; color: var(--ocean);
+  }
+  .badge b { font-weight: 700; }
+
+  /* YouTube CTA */
+  .youtube {
+    background: linear-gradient(160deg, #093843 0%, #0e4d5c 100%);
+    color: var(--sand); text-align: center; position: relative; overflow: hidden;
+  }
+  .youtube::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(700px 300px at 50% 0%, rgba(224,181,82,0.16), transparent 60%);
+  }
+  .youtube .wrap { position: relative; z-index: 2; max-width: 760px; }
+  .yt-play {
+    width: 76px; height: 76px; border-radius: 50%; background: #ff0033;
+    display: inline-flex; align-items: center; justify-content: center; margin-bottom: 26px;
+    box-shadow: 0 14px 40px -12px rgba(255,0,51,0.7);
+  }
+  .yt-play svg { width: 30px; height: 30px; fill: #fff; margin-left: 4px; }
+  .youtube h2 { font-size: clamp(1.9rem, 4.4vw, 2.7rem); font-weight: 600; color: var(--white); margin-bottom: 18px; }
+  .youtube p { font-size: 1.1rem; color: rgba(246,239,228,0.9); max-width: 52ch; margin: 0 auto 34px; }
+  .btn-yt { background: #ff0033; color: #fff; }
+  .btn-yt:hover { background: #e6002e; transform: translateY(-2px); }
+
+  /* Contact */
+  .contact { background: var(--sand-deep); text-align: center; }
+  .contact h2.section-title { color: var(--ocean); margin: 0 auto 18px; }
+  .contact p.sub { font-size: 1.08rem; color: var(--ink-soft); max-width: 52ch; margin: 0 auto 34px; }
+  .contact-btns { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+  .form-card {
+    max-width: 780px; margin: 0 auto; background: var(--white);
+    border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden;
+    padding: 8px;
+  }
+  .form-card iframe { display: block; width: 100%; border: 0; min-height: 1180px; border-radius: 12px; background: #fff; }
+  .contact a.inline-email { color: var(--ocean); font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(14,77,92,0.3); }
+  .contact a.inline-email:hover { color: var(--ocean-deep); }
+
+  /* Footer */
+  footer.site {
+    background: var(--ocean-deep); color: rgba(246,239,228,0.75);
+    padding: 48px 0 40px; text-align: center; font-size: 0.9rem;
+  }
+  footer.site .brand-lg { font-family: 'Fraunces', serif; font-size: 1.4rem; color: var(--sand); margin-bottom: 14px; }
+  footer.site .brand-lg span { color: var(--gold-light); }
+  .foot-links { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; margin: 18px 0 22px; }
+  .foot-links a { color: rgba(246,239,228,0.85); text-decoration: none; font-weight: 500; }
+  .foot-links a:hover { color: var(--gold-light); }
+  footer.site .fine { font-size: 0.8rem; color: rgba(246,239,228,0.5); margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand"><img class="nav-avatar" src="lynn.jpg" alt="" onerror="this.style.display='none'" />321 <span>Travel Therapy</span></a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#specialties">What I Do</a>
+      <a href="#approach">Approach</a>
+      <a href="#youtube">YouTube</a>
+      <a href="#contact" class="nav-cta">Start Planning</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow">Luxury &amp; Accessible Travel Planning</span>
+    <h1>You don't have to have it all together to <em>see the world.</em></h1>
+    <p class="lede">You just need the right advisor. I plan luxury, high-touch trips for anxious, quirky, high-maintenance travelers — built around the real you, not the traveler you wish you were.</p>
+    <div class="hero-btns">
+      <a href="#youtube" class="btn btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>
+        Follow the journey on YouTube
+      </a>
+      <a href="#contact" class="btn btn-ghost">Plan a trip</a>
+    </div>
+    <div class="hero-trust">
+      <span>Certified Travel Advisor (CTA)</span>
+      <span>IATA Accredited</span>
+      <span>Signature Travel Network</span>
+      <span>Travel Planners International</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo">
+      <img src="lynn.jpg" alt="Lynn Richards-Suley, Certified Travel Advisor and founder of 321 Travel Therapy" onerror="this.closest('.about-photo').style.display='none'" />
+      <div class="photo-cap"><b>Lynn Richards-Suley</b>Certified Travel Advisor · Founder</div>
+    </div>
+    <div class="about-text">
+      <p class="section-label">Meet your advisor</p>
+      <h2 class="section-title">Travel isn't always pretty. I know — I've lived it.</h2>
+      <p>For some of us, travel comes with sweaty palms at the gate, three checked bags, a carry-on full of "just in case," a pill organizer the size of a small country, and a search history that includes "what if the plane" more times than we'd like to admit. If that sounds familiar — <strong>welcome. You are exactly who I built this for.</strong></p>
+      <p>321 Travel Therapy was born out of my own complicated relationship with travel. I'm an anxious, quirky, high-maintenance traveler who has been to all corners of the globe anyway — because the world is too extraordinary to let fear, logistics, or a sensitive stomach keep you home.</p>
+      <p>After years of homeschooling my daughter around the globe, travel became my therapy. I figured out how to do it beautifully — with real accommodations, careful planning, and the right people in my corner. <strong>Now I do that for you.</strong></p>
+    </div>
+  </div>
+  <div class="wrap about-pull-wrap">
+    <div class="pullquote">
+      <p>"I've been that traveler. I am that traveler. And I will make sure you get there — comfortably, confidently, and with a lot less panic than you started with."</p>
+      <div class="sig">— Lynn Richards-Suley, Certified Travel Advisor</div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALTIES -->
+<section class="specialties" id="specialties">
+  <div class="wrap">
+    <p class="section-label">What I specialize in</p>
+    <h2 class="section-title">Trips for travelers who need more than a booking link.</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="ico">🌴</div>
+        <h3>Luxury &amp; High-Touch</h3>
+        <p>White-glove experiences where every detail is handled. I know which resorts actually deliver and which airlines are worth the upgrade.</p>
+      </div>
+      <div class="card">
+        <div class="ico">🏝️</div>
+        <h3>Caribbean &amp; Tropical</h3>
+        <p>Deep destination knowledge across the Caribbean and tropics — the on-water experiences, the hidden gems, and the places worth your time.</p>
+      </div>
+      <div class="card">
+        <div class="ico">♿</div>
+        <h3>Special Needs &amp; Accessibility</h3>
+        <p>I know which resorts genuinely deliver on accessibility and how to build an itinerary that accounts for real needs, not just good intentions.</p>
+      </div>
+      <div class="card">
+        <div class="ico">👪</div>
+        <h3>Group Travel</h3>
+        <p>Multi-family, celebration, and group trips coordinated end-to-end — so the logistics stay with me and the memories stay with you.</p>
+      </div>
+      <div class="card">
+        <div class="ico">🧭</div>
+        <h3>Anxious &amp; Complex Travelers</h3>
+        <p>I know the questions to ask before you even think to ask them — and how to plan around the parts of travel that make you nervous.</p>
+      </div>
+      <div class="card">
+        <div class="ico">✨</div>
+        <h3>Curated Itineraries</h3>
+        <p>Custom trips designed around you, backed by one of the most respected consortia in the industry and serious supplier relationships.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="approach" id="approach">
+  <div class="wrap approach-grid">
+    <div class="approach-lead">
+      <p class="section-label">The 321 approach</p>
+      <h2 class="section-title">Serious access. Personal care. A lot less panic.</h2>
+      <p>As a Certified Travel Advisor affiliated with <em>Travel Planners International</em> and <em>Signature Travel Network</em> — one of the most respected consortia in the industry — I bring real industry access and relationships to every trip I plan. IATA Accredited.</p>
+      <p>That means upgrades, amenities, and on-the-ground support you can't get booking on your own — paired with an advisor who actually understands what makes travel hard.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">3</div>
+        <div><h4>We talk about the real you</h4><p>Your must-haves, your worries, your non-negotiables. I listen for the things most people don't think to mention.</p></div>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <div><h4>I build it around you</h4><p>A curated itinerary with the right resorts, the right pace, and the accommodations that actually matter — all vetted, all handled.</p></div>
+      </div>
+      <div class="step">
+        <div class="num">1</div>
+        <div><h4>You go — confidently</h4><p>You travel with a plan, real support, and someone in your corner. All that's left is the extraordinary part.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="creds">
+  <div class="wrap">
+    <h2>Credentials you can trust</h2>
+    <p class="sub">Real industry accreditation and relationships behind every trip.</p>
+    <div class="cred-badges">
+      <div class="badge"><b>Certified Travel Advisor</b> (CTA)</div>
+      <div class="badge"><b>IATA</b> Accredited</div>
+      <div class="badge"><b>Signature</b> Travel Network</div>
+      <div class="badge"><b>Travel Planners International</b></div>
+      <div class="badge">The Travel Institute</div>
+    </div>
+  </div>
+</section>
+
+<!-- YOUTUBE CTA -->
+<section class="youtube" id="youtube">
+  <div class="wrap">
+    <div class="yt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+    <h2>Follow the journey on YouTube</h2>
+    <p>Real destinations, honest travel tips, and behind-the-scenes of planning trips for travelers just like you. Subscribe to 321 Travel Therapy and come along.</p>
+    <a href="https://www.youtube.com/channel/UCS53Xz1AeFFmh71i0EleSeg?sub_confirmation=1" target="_blank" rel="noopener" class="btn btn-yt">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>
+      Subscribe on YouTube
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="section-label" style="color: var(--gold);">Let's plan something extraordinary</p>
+    <h2 class="section-title">Start planning your trip.</h2>
+    <p class="sub">Tell me where you'd love to go — or just what's been stopping you. The more you share, the better I can help. I read every inquiry personally.</p>
+    <div class="form-card">
+      <iframe title="Start Planning — Travel Inquiry with 321 Travel Therapy" src="https://www.cognitoforms.com/endlessbluecharters/startplanningtravelinquiry2" loading="lazy" allow="payment"></iframe>
+    </div>
+    <p class="sub" style="margin: 30px auto 0; font-size: 0.98rem;">Prefer email? Reach me directly at <a class="inline-email" href="mailto:321traveltherapy@gmail.com?subject=Let's%20plan%20a%20trip">321traveltherapy@gmail.com</a>.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site">
+  <div class="wrap">
+    <div class="brand-lg">321 <span>Travel Therapy</span></div>
+    <div>Luxury &amp; accessible travel planning with Lynn Richards-Suley</div>
+    <div class="foot-links">
+      <a href="mailto:321traveltherapy@gmail.com">Email</a>
+      <a href="https://www.youtube.com/channel/UCS53Xz1AeFFmh71i0EleSeg" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.linkedin.com/in/hrsamurai" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div>Certified Travel Advisor · IATA Accredited · Signature Travel Network · Travel Planners International</div>
+    <div class="fine">© 2026 321 Travel Therapy. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
